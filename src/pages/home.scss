@@ -1,6 +1,23 @@
 @import "../shared/helper";
 
-#header {
+.home {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
   height: getPx(98);
   background-size: cover;
 }
+
+.main {
+  flex: 1;
+  display: grid;
+  grid-template:
+    "box1 box2 box4 box5" 755fr
+    "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
+}
+
+
+
