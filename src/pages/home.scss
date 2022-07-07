@@ -61,25 +61,54 @@ section::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    h1 {
-      color: white;
-      font-size: getPx(22);
-      border: 1px solid #07549b;
-      border-bottom-left-radius: getPx(4);
-      border-bottom-right-radius: getPx(4);
-      width: getPx(260);
-      height: getPx(48);
-      line-height: getPx(24);
-      padding: getPx(10) getPx(20);
+    margin-bottom: getPx(20);
+
+  }
+  .案件破获排名 {
+    height: getPx(315);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    color: white;
+    font-size: getPx(22);
+    border: 1px solid #07549b;
+    border-bottom-left-radius: getPx(4);
+    border-bottom-right-radius: getPx(4);
+    width: getPx(260);
+    height: getPx(48);
+    line-height: getPx(24);
+    padding: getPx(10) getPx(20);
+    text-align: center;
+  }
+  .barChart {
+    flex: 1;
+    width: 100%;
+  }
+  .lengend {
+    width: 90%;
+    padding: getPx(10);
+    display: flex;
+    flex-direction: row-reverse;
+    color: #445475;
+    font-size: getPx(18);
+    .first {
+      width: getPx(18);
+      height: getPx(12);
+      display: inline-block;
+      background: linear-gradient(90deg, #2034f9 0%, #04a1ff 100%);
+      margin: getPx(10);
     }
-    .barChart {
-      flex: 1;
-      width: 100%;
+    .second {
+      width: getPx(18);
+      height: getPx(12);
+      display: inline-block;
+      background: linear-gradient(90deg, #b92ae8 0%, #6773e7 100%);
+      margin: getPx(10);
     }
   }
-
-
-
 }
 
 .section2 {
@@ -99,8 +128,9 @@ section::before {
 
 .section5 {
   grid-area: box5;
-
 }
 
-
-
+.footer {
+  height: getPx(68);
+  background-size: cover;
+}

@@ -1,9 +1,10 @@
 import React, {useContext, useEffect, useRef} from "react";
 import * as echarts from 'echarts';
+import {getPx} from "../shared/getPx";
+import {textWrap} from "../shared/textWrap";
+
 export const Chart1 = () => {
-    const getPx = (n) => {
-        return  n / 2420 * (window as any).pageWidth
-    }
+
 
     const divRef = useRef(null)
     useEffect(() => {
@@ -23,19 +24,19 @@ export const Chart1 = () => {
                 axisTick: {
                     show: false
                 },
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: "#2c70b2",
+                    },
+                } ,
                 axisLabel: {
                     fontSize: getPx(13),
+                    color: '#717a96',
                     margin: getPx(6),
                     interval: 0,
-                    color: '#5e6579',
-                    formatter:function(text) {
-                        if(text.length > 2){
-                            const arr = text.split('')
-                            arr.splice(2,0,'\n')
-                            return arr.join('')
-                        } else {
-                            return text
-                        }
+                    formatter: function(text) {
+                        return textWrap(text,2)
                     }
                 }
             },
@@ -43,15 +44,19 @@ export const Chart1 = () => {
                 axisLine: {
                     show:true,
                     lineStyle: {
-
-                    },
+                        color: "#2c70b2",
+                    }
                 },
                 splitLine:{
                     show:false
                 },
                 axisLabel: {
-                    fontSize: getPx(15)
-                }
+                    fontSize: getPx(15),
+                    color: '#717a96',
+                    axisLine: {
+                        show:true,
+                    },
+                },
             },
             series: [
                 {
@@ -62,11 +67,10 @@ export const Chart1 = () => {
         });
     },[])
     return (
-        <section  className="section1">
+
             <div className='管辖统计 setBorder'>
                 <h1>案发派出所管辖统计</h1>
                 <div className='barChart' ref={divRef}></div>
             </div>
-        </section>
     )
 }
