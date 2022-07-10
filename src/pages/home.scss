@@ -54,7 +54,6 @@ h1 {
   border: 1px solid #07549b;
   border-bottom-left-radius: getPx(4);
   border-bottom-right-radius: getPx(4);
-  width: getPx(260);
   height: getPx(48);
   line-height: getPx(24);
   padding: getPx(10) getPx(20);
@@ -126,15 +125,72 @@ h1 {
   }
 }
 
-
 .section3 {
   grid-area: box3;
-
+  .往年战果数对比 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .table {
+      margin: getPx(38);
+      border-collapse: collapse;
+      color: white;
+      font-size: getPx(10);
+      th, td {
+        border: 1px solid #1a3671;
+        text-align: center;
+      }
+      thead {
+        th {
+          height: getPx(70);
+          box-shadow: inset 0 0 getPx(60) 0 #1f3d85;
+        }
+      }
+      tbody {
+        td {height: getPx(50); width: getPx(84);
+          background: #1c2456;
+        }
+      }
+    }
+  }
 }
 
 .section4 {
   grid-area: box4;
-
+  .籍贯 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: getPx(753);
+    background: transparent;
+      .wrapper {
+      position: relative;width: 100%;flex: 1;
+      display: flex; flex-direction: column;
+      .barChart {flex: 1;}
+      .legend {
+        color: white;
+        position: absolute;bottom: getPx(40);left: getPx(20);
+        display: flex;align-items: center;
+        font-size: getPx(22); padding: getPx(20) getPx(10) getPx(20) 0;
+        border-radius: 0;
+        .icon {
+          margin: 0 getPx(10);
+          display: inline-block;
+          width: getPx(16);
+          height: getPx(16);
+          border-radius: 50%;
+          background: #1cecd9;
+        }
+      }
+      .notes{
+        position: absolute;
+        bottom: getPx(10);
+        right: getPx(10);
+      }
+    }
+  }
 }
 
 .section5 {

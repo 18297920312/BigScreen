@@ -2,7 +2,6 @@ import React, {useContext, useEffect, useRef} from "react";
 import * as echarts from 'echarts';
 import {getPx} from "../shared/getPx";
 import {textWrap} from "../shared/textWrap";
-
 export const Chart1 = () => {
 
 
