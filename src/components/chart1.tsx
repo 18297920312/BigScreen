@@ -9,8 +9,7 @@ export const Chart1 = () => {
     const divRef = useRef(null)
     useEffect(() => {
 // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(divRef.current,null, {
-        });
+        var myChart = echarts.init(divRef.current,null, {});
 // 绘制图表
         myChart.setOption({
             grid: {
@@ -67,7 +66,6 @@ export const Chart1 = () => {
         });
     },[])
     return (
-
             <div className='管辖统计 setBorder'>
                 <h1>案发派出所管辖统计</h1>
                 <div className='barChart' ref={divRef}></div>

@@ -6,15 +6,14 @@ export const Chart2 = () => {
     const divRef = useRef(null)
     useEffect(() => {
 // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(divRef.current,null, {
-        });
+        var myChart = echarts.init(divRef.current,null, {});
 // 绘制图表
         myChart.setOption({
             grid: {
                 x: getPx(60),
                 y: getPx(20),
                 x2: getPx(10),
-                y2: getPx(30),
+                y2: getPx(10),
             },
             xAxis: {
                 type: 'value',
