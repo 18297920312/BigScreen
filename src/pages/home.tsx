@@ -8,6 +8,8 @@ import {Chart3} from "../components/chart3";
 import {Chart4} from "../components/chart4";
 import {Chart5} from "../components/chart5";
 import {Chart6} from "../components/chart6";
+import {Chart7} from '../components/chart7';
+import { Chart8 } from '../components/chart8';
 export const Home = () => {
   return (
    <div className='home'>
@@ -29,8 +31,12 @@ export const Home = () => {
             <div className='分布 setBorder'>
                 <h1>犯罪人员年龄分布</h1>
                 <div className="box">
-                    <div className='first'></div>
-                    <div className='second'></div>
+                    <div className='first'>
+                        <Chart7/>
+                    </div>
+                    <div className='second'>
+                        <Chart8/>
+                    </div>
                     <div className='third'></div>
                 </div>
             </div>

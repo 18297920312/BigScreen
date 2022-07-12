@@ -203,6 +203,10 @@ h1 {
       border: 1px solid red;
       flex: 1;
       display: flex;
+      .chart789 {
+        width: 100%;
+        height: 100%;
+      }
       .first{
         border: 1px solid yellow;
         flex: 1;
