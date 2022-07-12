@@ -9,7 +9,7 @@ export const ChartX = () => {
     const divRef = useRef(null);
     const colors = {'青海省': '#BB31F7', '甘肃省': '#15B8FD', '四川省': '#0eee06'};
     useEffect(() => {
-        var myChart = echarts.init(divRef.current);
+        var myChart = echarts.init(divRef.current); 
         // @ts-ignore
         echarts.registerMap('CN', china);
         myChart.setOption(createEchartsOptions({

@@ -3,8 +3,6 @@ import * as echarts from 'echarts';
 import {getPx} from "../shared/getPx";
 import {textWrap} from "../shared/textWrap";
 export const Chart1 = () => {
-
-
     const divRef = useRef(null)
     useEffect(() => {
 // 基于准备好的dom，初始化echarts实例

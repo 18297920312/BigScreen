@@ -7,11 +7,8 @@ import {Chart2} from "../components/chart2";
 import {Chart3} from "../components/chart3";
 import {Chart4} from "../components/chart4";
 import {Chart5} from "../components/chart5";
-import {ChartX} from "../components/chartX";
 import {Chart6} from "../components/chart6";
-
 export const Home = () => {
-
   return (
    <div className='home'>
       <div className='header' style={{backgroundImage: `url(${headerBg})`}}></div>
@@ -29,8 +26,18 @@ export const Home = () => {
         </section>
         <section  className="section4">
             <Chart6/>
+            <div className='分布 setBorder'>
+                <h1>犯罪人员年龄分布</h1>
+                <div className="box">
+                    <div className='first'></div>
+                    <div className='second'></div>
+                    <div className='third'></div>
+                </div>
+            </div>
         </section>
-        <section  className="section5 setBorder"></section>
+        <section  className="section5 setBorder">
+       
+        </section>
       </main>
       <footer>
           <div className="footer" style={{backgroundImage: `url(${footerBg})`}}></div>

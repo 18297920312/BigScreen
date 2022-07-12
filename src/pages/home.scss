@@ -158,6 +158,8 @@ h1 {
 
 .section4 {
   grid-area: box4;
+  display: flex;
+  flex-direction: column;
   .籍贯 {
     display: flex;
     flex-direction: column;
@@ -165,6 +167,7 @@ h1 {
     align-items: center;
     height: getPx(753);
     background: transparent;
+    margin-bottom: getPx(20);
       .wrapper {
       position: relative;width: 100%;flex: 1;
       display: flex; flex-direction: column;
@@ -188,6 +191,29 @@ h1 {
         position: absolute;
         bottom: getPx(10);
         right: getPx(10);
+      }
+    }
+  }
+
+  .分布{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    .box {
+      border: 1px solid red;
+      flex: 1;
+      display: flex;
+      .first{
+        border: 1px solid yellow;
+        flex: 1;
+      }
+      .second {
+        border: 1px solid green;
+        flex: 1;
+      }
+      .third {
+        border: 1px solid pink;
+        flex: 1;
       }
     }
   }
