@@ -39,7 +39,6 @@ export const Chart8 = () => {
                   show: false,
                   position: 'center'
                 },
-          
                 data: [
                     {value: 0.07, name: '10-20'},
                     {value: 0.10, name: '20-30'},

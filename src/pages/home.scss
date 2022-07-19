@@ -237,6 +237,12 @@ h1 {
 
 .section5 {
   grid-area: box5;
+  .类型统计 {
+    height: getPx(315);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .footer {
