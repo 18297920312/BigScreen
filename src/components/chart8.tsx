@@ -11,10 +11,12 @@ export const Chart8 = () => {
         myChart.setOption({
             color : colors,
             legend: {
-              bottom: '1%',
+              bottom: '7%',
               left: 'center',
               itemWidth: getPx(13),
               itemheight: getPx(1),
+              itemGap: getPx(8),
+              padding: 0,
               textStyle: {
                 color: 'white',
                 fontSize: getPx(15)

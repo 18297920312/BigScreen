@@ -12,7 +12,9 @@ export const Chart3 = () => {
             legend: {
                 data: ['盗窃', '两枪', '诈骗', '谋杀', '卖淫'],
                 itemHeight: getPx(10),
-                bottom: 0,
+                bottom: getPx(15),
+                itemGap: getPx(8),
+                padding: 0,
                 textStyle: {
                     fontSize: getPx(15),
                     color: '#6887a9'

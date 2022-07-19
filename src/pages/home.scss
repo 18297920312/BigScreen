@@ -128,22 +128,24 @@ h1 {
 .section3 {
   grid-area: box3;
   .往年战果数对比 {
+    height: getPx(315);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     .table {
-      margin: getPx(38);
+      margin: getPx(20);
       border-collapse: collapse;
       color: white;
       font-size: getPx(10);
+      flex: 1;
       th, td {
         border: 1px solid #1a3671;
         text-align: center;
       }
       thead {
         th {
-          height: getPx(70);
+          height: getPx(75);
           box-shadow: inset 0 0 getPx(60) 0 #1f3d85;
         }
       }
@@ -199,25 +201,35 @@ h1 {
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
     .box {
-      border: 1px solid red;
       flex: 1;
       display: flex;
+      width: 100%;
       .chart789 {
         width: 100%;
         height: 100%;
       }
       .first{
-        border: 1px solid yellow;
         flex: 1;
       }
       .second {
-        border: 1px solid green;
         flex: 1;
       }
       .third {
-        border: 1px solid pink;
         flex: 1;
+        display: flex;
+        .犯罪年龄趋势 {
+          h1 {
+            border: none;
+            color: #6ca3cb;
+            padding-top: getPx(20);
+          }
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
       }
     }
   }

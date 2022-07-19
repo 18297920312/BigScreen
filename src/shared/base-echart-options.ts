@@ -1,7 +1,6 @@
 import {getPx} from './getPx';
 
 export const baseEchartOptions = {
-
     textStyle: {
         fontSize: getPx(12),
         color: '#79839E'
