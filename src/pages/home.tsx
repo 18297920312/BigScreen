@@ -13,6 +13,7 @@ import {Chart8} from '../components/chart8';
 import {Chart9} from '../components/chart9';
 import {Chart10} from "../components/chart10";
 import {Chart11} from '../components/chart11';
+import {Chart12} from '../components/chart12';
 export const Home = () => {
   return (
    <div className='home'>
@@ -49,6 +50,7 @@ export const Home = () => {
         <section  className="section5">
             <Chart10/>
             <Chart11/>
+            <Chart12/>
         </section>
       </main>
       <footer>
