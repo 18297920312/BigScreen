@@ -4,11 +4,16 @@ import {getPx} from "../shared/getPx";
 import {textWrap} from "../shared/textWrap";
 export const Chart10 = () => {
     const divRef = useRef(null)
-    useEffect(() => {
-// 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(divRef.current,null, {});
-// 绘制图表
-        myChart.setOption({
+    const myChart = useRef(null)
+    const data = [
+        { value: 0.4, name: '刑事案件' },
+        { value: 0.46, name: '经济案件' },
+        { value: 0.5, name: '民事案件' },
+        { value: 0.26, name: '交通案件' },
+        { value: 0.22, name: '其他' },
+    ]
+    const x = (data) => {
+        myChart.current.setOption({
             legend: {
                 right: getPx(50),
                 orient : 'vertical',
@@ -31,20 +36,30 @@ export const Chart10 = () => {
                         show: true, position: 'outside', textStyle: {color: 'white', fontSize: getPx(20)},
                         distanceToLabelLine: 0,
                         formatter(options) {
-                            return options.value * 100 + '%';
+                            return parseInt((options.value * 100).toString())  + '%';
                         }
                     },
-                    data: [
-                        { value: 0.4, name: '刑事案件' },
-                        { value: 0.46, name: '经济案件' },
-                        { value: 0.5, name: '民事案件' },
-                        { value: 0.26, name: '交通案件' },
-                        { value: 0.22, name: '其他' },
-
-                    ],
+                    data: data
                 }
             ]
         });
+    }
+    useEffect(() => {
+        myChart.current = echarts.init(divRef.current);
+        x(data)
+    },[])
+    useEffect(() => {
+        setInterval(() => {
+            const newData = [
+                { value: Math.random(), name: '刑事案件' },
+                { value: Math.random(), name: '经济案件' },
+                { value: Math.random(), name: '民事案件' },
+                { value: Math.random(), name: '交通案件' },
+                { value: Math.random(), name: '其他' },
+            ]
+            x(newData)
+        },2000)
+       
     },[])
     return (
         <div className='类型统计 setBorder'>

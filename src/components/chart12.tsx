@@ -2,7 +2,9 @@ import React from 'react';
 
 export const Chart12 = () => {
   return (
-    <table>
+    <div className="setBorder 作案手段">
+            <h1>作案手段分析</h1>
+            <table>
       <thead>
       <tr>
         <th colSpan={2}>类型</th>
@@ -65,5 +67,7 @@ export const Chart12 = () => {
       </tr>
       </tbody>
     </table>
+    </div>
+   
   );
 };

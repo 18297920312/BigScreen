@@ -133,9 +133,9 @@ export const Chart6 = () => {
                         name: 'Top 5',
                         type: 'scatter',
                         coordinateSystem: 'geo',
-                        //   symbol: 'image://http://ssq168.shupf.cn/data/biaoji.png',
-                        // symbolSize: [30,120],
-                        // symbolOffset:[0, '-40%'] ,
+                          symbol: 'image://http://ssq168.shupf.cn/data/biaoji.png',
+                        symbolSize: [30,120],
+                        symbolOffset:[0, '-40%'] ,
                         label: {
                             normal: {
                                 show: false,
